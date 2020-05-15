@@ -1,5 +1,4 @@
-html, body{margin: 0; background-color: #d6c5a4;
-    ;}
+html, body{margin: 0; background-image: url(../images/fondo-web.png)}
 body {font-family: "Lato", sans-serif;} 
 /* Con la propiedad box-sizing aseguramos que las medidas que indicadas a las cajas sean exactamnte las indicadas, 
 ya que cuando no ponemos esta etiqueta los padding y bordes no se cuentan. por ejemplo al indicar a un div con
@@ -18,7 +17,7 @@ un width de 190px si este tuviera un borde de 5px el tamaño total de la caja se
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
-    border-right: 5px solid #ccc;
+    border-right: 8px solid #ccc;
     /* overflow: auto; */
 }
 .ctn_menu button {
