@@ -17,37 +17,70 @@
               <button class="botones_menu" onclick="Abrir_ficha(event, 'Asignaciones')"><i class="fa fa-address-card"></i> Asignaciones</button>
               <button class="botones_menu" onclick="Abrir_ficha(event, 'Actividades')"><i class="fa fa-fw fa-envelope"></i> Actividades</button>
             </div>
+            <!-- PROFESORES -->
             <div class="cont_botones" id="Profesores">
                 <h1>Profesores</h1>
-                <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas accusantium officiis sed unde quasi accusamus, enim quidem. Sapiente sint fugit molestias, optio in distinctio enim iure natus voluptas animi unde maxime
-                     ratione totam doloribus molestiae incidunt necessitatibus deleniti nostrum veritatis harum consequatur aliquid corporis. Nostrum, molestias mollitia esse eius sunt dicta ipsa 
-                     quibusdam error nisi porro qui vitae consequatur sed delectus eaque doloremque illo repellendus eos! Ex, excepturi. Velit, maiores commodi dicta ea rerum aliquam ullam 
-                     repellendus repellat facilis numquam voluptatum nam molestiae eaque, similique fugit doloribus nobis iste obcaecati quaerat voluptatibus, deleniti delectus beatae dolorem!
-                      Mollitia rerum sed perferendis atque delectus et officiis, totam architecto excepturi tempora dicta. Voluptatum maiores perspiciatis, odio quia culpa quibusdam illum 
-                      voluptate recusandae explicabo modi in facilis ut nobis quam aliquid, magnam voluptatibus reprehenderit tempora amet unde totam corrupti. Deserunt optio vel dolores
-                       adipisci architecto expedita magni quidem totam nostrum recusandae neque, assumenda fugiat perferendis laboriosam quasi ea quis nobis repudiandae ducimus sint
-                        dignissimos iusto voluptatibus. Tempore nemo non et? Vitae libero earum tempore magni qui obcaecati dolor consequatur, possimus eveniet ipsa! Accusamus fuga a, voluptate 
-                        at nostrum quo. Consequuntur quis nam, fugit est illum laboriosam saepe nulla, perspiciatis adipisci ab inventore impedit tenetur veniam quas dolor voluptatum quam. Minima 
-                        consequuntur ipsa repellat culpa! Porro accusamus fugit numquam consequuntur voluptates repudiandae at placeat odit esse veniam, cupiditate perferendis explicabo nemo 
-                        dignissimos maxime! Vero voluptatum sequi rerum, id aspernatur error non labore, necessitatibus repellat molestias enim. Autem provident facilis natus aliquam voluptates,
-                         aut laborum sequi doloremque delectus molestias odit ut rem at ducimus. Omnis sint voluptatibus quo dolore corrupti ratione eaque iure nulla, velit debitis quas ad aliquid 
-                         culpa dicta rerum cumque cupiditate possimus expedita perferendis alias! Nisi, dolore cumque asperiores voluptates itaque cupiditate incidunt eligendi at, dicta qui 
-                         molestiae commodi? Cumque sint provident dolor!</pre>
+                <div id="formu_profe"></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn_datos_nuevos" id="nuevo_profesor" onclick="nuevo_profesor()">Nuevo profesor</button><br><br>
+                <table class="tabla_datos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_profes">
+                    </tbody>
+                </table>
             </div>
+            <!-- EMPRESAS -->
             <div class="cont_botones" id="Empresas">
                 <h1>Empresas</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <div id="formu_empresas"></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn_datos_nuevos" id="nueva_empresa" onclick="nueva_empresa()">Nuevo empresa</button><br><br>
+                <table class="tabla_datos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Direccion</th>
+                            <th>Web</th>
+                            <th>Persona de contacto</th>
+                            <th>Telefono contacto</th>
+                            <th>Email contacto</th>
+                            <th>Tutor laboral</th>
+                            <th>Email tutor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="formu_empresas">
+                    </tbody>
+                </table>
             </div>
             <div class="cont_botones" id="Alumnos">
                 <h1>Alumnos</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
             </div>
             <div class="cont_botones" id="Asignaciones">
                 <h1>Asignaciones</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                
             </div>
             <div class="cont_botones" id="Actividades">
                 <h1>Actividades</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati  Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
             </div>
             <script src="js/js1.js"></script>              

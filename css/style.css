@@ -5,11 +5,6 @@ ya que cuando no ponemos esta etiqueta los padding y bordes no se cuentan. por e
 un width de 190px si este tuviera un borde de 5px el tamaño total de la caja sería 195px pese al verle indicado un width de 190px*/
 * {box-sizing: border-box}
 .ctn_menu {
-    /* float: left;
-    border: 1px solid #ccc;
-    background-color: #111111;
-    width: 18%;
-    height: 300px; */
     margin: 0;
     padding: 0;
     /* EN CASO DE MOFIFICAR ESTE ANCHO CAMBIAR EL MARGEN DEL cont_botenes */
@@ -18,7 +13,6 @@ un width de 190px si este tuviera un borde de 5px el tamaño total de la caja se
     position: fixed;
     height: 100%;
     border-right: 8px solid #ccc;
-    /* overflow: auto; */
 }
 .ctn_menu button {
     font-size: 20px;
@@ -28,18 +22,16 @@ un width de 190px si este tuviera un borde de 5px el tamaño total de la caja se
     padding: 22px 16px;
     width: 100%;
     border: none;
-    /* outline: none; */
     text-align: left;
     cursor: pointer;
     /* con esta etiqueta el color de fondo inficado se colorea de manera progresiva */
     transition: 1s;
 }
 .cont_botones {
-    /* float: left; */
     padding: 0px 12px;
-    /* border-left: 2px; */
     height: 100%;
     margin-left: 16%;
+    /* Para tener una barra de navegación solo del div que me interesa y no  de toda la pagina, por ejemplo al poner la etiqueta <pre> y se salga del ancho de la web */
     overflow: auto;
 }
 .ctn_menu button:hover {
@@ -48,4 +40,34 @@ un width de 190px si este tuviera un borde de 5px el tamaño total de la caja se
 }
 .ctn_menu button.active {
     background-color:rgb(224, 146, 0);
+}
+.tabla_datos{
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 2px solid rgb(224, 146, 0);
+    padding:20px;
+}
+.bot_guardar, .btn_datos_nuevos{
+    color:white;
+    font-weight:bold;
+    background-color:rgb(224, 146, 0);
+    padding: 10px;
+    box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.61);
+    border-radius: 15px;
+    font-size:15px;
+}
+.btn_datos_nuevos:hover {
+    color: #fffb00;
+    background-color: rgb(134, 89, 6);
+    cursor: pointer;
+    /* con esta etiqueta el color de fondo inficado se colorea de manera progresiva */
+    transition: 1s;
+}
+.bot_guardar:hover {
+    color: #fffb00;
+    background-color: rgb(134, 89, 6);
+    cursor: pointer;
+    /* con esta etiqueta el color de fondo inficado se colorea de manera progresiva */
+    transition: 1s;
 }
