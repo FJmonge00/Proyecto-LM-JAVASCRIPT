@@ -71,3 +71,7 @@ table, td, th {
     /* con esta etiqueta el color de fondo inficado se colorea de manera progresiva */
     transition: 1s;
 }
+table {
+    background-color: red;
+
+}

@@ -55,7 +55,7 @@ function Abrir_ficha(evt, nombre_ficha) {
     fila.innerHTML=fila_nueva;
     // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
     document.getElementById("tbl_profes").appendChild(fila);
- };
+ }
   function guardar_empresa(){
     // Indico de donde vienen los nuevos valores (los input)
     var nombre = document.getElementById("nomb").value;
@@ -68,12 +68,12 @@ function Abrir_ficha(evt, nombre_ficha) {
     var telf_tutor = document.getElementById("telf_tutor").value;
     var mail_tutor = document.getElementById("mail_tutor").value;
     // guardo en una variable los nuevos valores
-    var fila_nueva="<tr><td>"+nombre+"</td><td>"+apeliidos+"</td><td>"+direc+"</td><td>"+web+"</td><td>"+per_contac+"</td><td>"+telf_contac+"</td><td>"+mail_contac+"</td><td>"+tutor+"</td><td>"+telf_tutor+"</td><td>"+mail_tutor+"</td></tr>";
+    var fila_nueva="<tr><td>"+nombre+"</td><td>"+direc+"</td><td>"+web+"</td><td>"+per_contac+"</td><td>"+telf_contac+"</td><td>"+mail_contac+"</td><td>"+tutor+"</td><td>"+telf_tutor+"</td><td>"+mail_tutor+"</td></tr>";
     // en esta variable guardo la sentencia DOM la cual me permite crear un objeto html en este caso un TR
     var fila = document.createElement("TR");
    // A este TR le añado el valor que habia almecnado anteriomente en la varibale fila_nueva
     fila.innerHTML=fila_nueva;
     // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
-    document.getElementById("formu_empresas").appendChild(fila);
- };
+    document.getElementById("tbl_empresas").appendChild(fila);
+ }
   
