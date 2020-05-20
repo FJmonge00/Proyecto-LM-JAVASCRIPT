@@ -49,7 +49,7 @@ function nuevo_profesor() {
     formu_profe.innerHTML = `
   <p>Nombre: </p> <input id="nomb" type="text"><br><br>
   <p>Apellidos: </p><input id="apel" type="text"><br><br>
-  <button class="bot_guardar" id="btn_guardar" onclick="guardar_profe()">Guardar</button><br><br>
+  <button class="bot_guardar" id="btn_guardar" onclick="guardar_profe()"><a href="#tabla1">Guardar</a></button></button><br><br>
   `;
 }
 
@@ -66,7 +66,7 @@ function nueva_empresa() {
     <p>Tutor laboral</p><input id="tutor" type="text"><br><br>
     <p>Telefono tutor</p><input id="telf_tutor" type="text"><br><br>
     <p>Email tutor</p><input id="mail_tutor" type="text"><br><br>
-    <button class="bot_guardar" id="btn_guardar" onclick="guardar_empresa()">Guardar</button><br><br>
+    <button class="bot_guardar" id="btn_guardar" onclick="guardar_empresa()"><a href="#tabla2">Guardar</a></button><br><br>
   `;
 }
 
@@ -116,7 +116,7 @@ function nuevo_alumno() {
     <p>Tutor: </p><input id="alumn_tutor" type="text"><br><br>
     <p>Empresa: </p><input id="alumn_empresa" type="text"><br><br>
     <p>Centro: </p><input id="alumn_centro" type="text"><br><br>
-    <button class="bot_guardar" id="btn_guardar" onclick="anadir_alumno()">Guardar</button><br><br>
+    <button class="bot_guardar" id="btn_guardar" onclick="anadir_alumno()"><a href="#tabla3">Guardar</a></button></button><br><br>
   `;
 };
 // Utilizo esta funcion para añadir a lista desplegable de la pestaña asignaciones los distintos alumnos

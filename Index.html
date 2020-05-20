@@ -19,13 +19,13 @@
             <!-- PROFESORES -->
             <div class="cont_botones" id="Profesores">
                 <h1>Profesores</h1>
-                <div id="formu_profe"></div>
+                <div id="formu_profe" style="text-align: center;"></div>
                 <br>
                 <br>
                 <br>
                 <br>
                 <button class="btn_datos_nuevos" id="nuevo_profesor" onclick="nuevo_profesor()">Nuevo profesor</button><br><br>
-                <table class="tabla_datos">
+                <table id="tabla1" class="tabla_datos">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -39,13 +39,13 @@
             <!-- EMPRESAS -->
             <div class="cont_botones" id="Empresas">
                 <h1>Empresas</h1>
-                <div id="formu_empresas"></div>
+                <div id="formu_empresas" style="text-align: center;"></div>
                 <br>
                 <br>
                 <br>
                 <br>
                 <button class="btn_datos_nuevos" id="nueva_empresa" onclick="nueva_empresa()">Nuevo empresa</button><br><br>
-                <table class="tabla_datos">
+                <table id="tabla2" class="tabla_datos">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -65,9 +65,9 @@
             </div>
             <div class="cont_botones" id="Alumnos">
                 <h1>Alumnos</h1>
-                <div id="formu_alumnos"></div>
+                <div id="formu_alumnos" style="text-align: center;"></div>
                 <button class="btn_datos_nuevos" id="nuevo_alumno" onclick="nuevo_alumno()">Nuevo alumno</button><br><br>
-                <table class="tabla_datos">
+                <table id="tabla3" class="tabla_datos">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -136,7 +136,8 @@
                             <label>
                                 Fecha inicio: <input type="date" id="fechaAsignaciones">
                             </label>
-                            <button>Guardar</button>
+                            <!-- NO he conseguido guardar elemtos de hora activiades etc por lo que lo dejo comentado -->
+                            <!-- <button>Guardar</button> -->
                         </td>
                     </tr>
                     </tbody>
@@ -210,7 +211,7 @@
             </div>
             <div class="cont_botones" id="Actividades">
                 <h1>Actividades</h1>
-                <div id="formu_actividades"></div>
+                <div id="formu_actividades" style="text-align: center;"></div>
                 <button class="btn_datos_nuevos" id="nueva_actividad" onclick="nueva_actividad()" disabled>Nueva actividad</button><br><br>
                 <table class="tabla_datos">
                     <thead>

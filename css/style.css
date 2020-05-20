@@ -1,5 +1,16 @@
-html, body{margin: 0; background-image: url(../images/fondo-web.png)}
-body {font-family: "Lato", sans-serif;} 
+html, body{margin: 0; background-image: url(../images/fondo-web.png); color: #8a5a01;}
+body {font-family: "Lato", sans-serif;}
+body table th{
+    border: 2px solid rgb(224, 146, 0);
+    width: 12,5%;
+}
+ /*Este estilo se aplica a todos los enlaces de la web en mi caso solo a aquellos  que no tienen valores mas restrictivos por un id class etc  */
+ /*(Para los enalces que llevan a la ultima fila cada vez que añado una NUEVA entrada a las tablas)*/
+body a{
+    color: white;
+    font-weight: bold;
+    text-decoration:none;
+} 
 /* Con la propiedad box-sizing aseguramos que las medidas que indicadas a las cajas sean exactamnte las indicadas, 
 ya que cuando no ponemos esta etiqueta los padding y bordes no se cuentan. por ejemplo al indicar a un div con
 un width de 190px si este tuviera un borde de 5px el tamaño total de la caja sería 195px pese al verle indicado un width de 190px*/
@@ -99,10 +110,18 @@ input:hover{
 #Asignaciones input{
     width: auto;
     font-weight: bold;
+    
 }
 #Asignaciones input:hover{
     background-color: #e09200a8;
     color: black;
     cursor: pointer;
     box-shadow: 5px 10px 5px 0px black;
+}
+p {
+    text-align: left;
+    font-size: 1.6em;
+}
+#Asignaciones th {
+    border: none;
 }
