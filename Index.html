@@ -9,7 +9,6 @@
         <!-- El enlace al fichero javascript lo he tenido que poner al final  -->
     </head>
     <body>
-        <body>
             <div class="ctn_menu">
               <button class="botones_menu" id="defaultOpen" onclick="Abrir_ficha(event, 'Profesores')"><i class="fa fa-users"></i> Profesores</button>
               <button class="botones_menu" onclick="Abrir_ficha(event, 'Empresas')"><i class="fa fa-industry"></i> Empresas</button>
@@ -66,23 +65,163 @@
             </div>
             <div class="cont_botones" id="Alumnos">
                 <h1>Alumnos</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <div id="formu_alumnos"></div>
+                <button class="btn_datos_nuevos" id="nuevo_alumno" onclick="nuevo_alumno()">Nuevo alumno</button><br><br>
+                <table class="tabla_datos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Ciclo</th>
+                            <th>Grado</th>
+                            <th>Profesor</th>
+                            <th>Tutor</th>
+                            <th>Empresa</th>
+                            <th>Centro</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_alumnos">
+                    </tbody>
+                </table>
             </div>
             <div class="cont_botones" id="Asignaciones">
                 <h1>Asignaciones</h1>
-                
+                <table id="asignacionesTable">
+                    <thead>
+                    <tr>
+                        <th colspan="4">
+                            <select id="asignaciones_lista">
+                                <option disabled selected value> Selecciona un usuario </option>
+                            </select>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Ciclo:</td>
+                        <td>
+                            <input type="text" id="asignacionesCiclo" value="" readonly>
+                        </td>
+                        <td>Tutor laboral:</td>
+                        <td>
+                            <input type="text" id="asignacionesTutor" value="" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grado:</td>
+                        <td>
+                            <input type="text" id="asignacionesGrado" value="" readonly>
+                        </td>
+                        <td>Empresa:</td>
+                        <td>
+                            <input type="text" id="asignacionesEmpresa" value="" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Profesor:</td>
+                        <td>
+                            <input type="text" id="asignacionesProfesor" value="" readonly>
+                        </td>
+                        <td>Centro de trabajo:</td>
+                        <td>
+                            <input type="text" id="asignacionesCentro" value="" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><label id="totalHoras">Total de horas realizadas: 0</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Fecha inicio: <input type="date" id="fechaAsignaciones">
+                            </label>
+                            <button>Guardar</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Actividades</th>
+                            <th>Horas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label id="asignacion1fecha"></label>
+                            </td>
+                            <td>
+                                <textarea id="asignacion1"></textarea>
+                            </td>
+                            <td>
+                                <input id="hora1" type="number" value="0" min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label id="asignacion2fecha"></label>
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                            <td>
+                                <input id="hora2" type="number" value="0" min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label id="asignacion3fecha"></label>
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                            <td>
+                                <input id="hora3" type="number" value="0" min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label id="asignacion4fecha"></label>
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                            <td>
+                                <input id="hora4" type="number" value="0" min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label id="asignacion5fecha"></label>
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                            <td>
+                                <input id="hora5" type="number" value="0" min="0">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="cont_botones" id="Actividades">
                 <h1>Actividades</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati  Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt obcaecati quod commodi eum sapiente incidunt quasi omnis corrupti, et error eligendi autem impedit assumenda? Nobis fuga beatae non nulla suscipit.</p>
+                <div id="formu_actividades"></div>
+                <button class="btn_datos_nuevos" id="nueva_actividad" onclick="nueva_actividad()" disabled>Nueva actividad</button><br><br>
+                <table class="tabla_datos">
+                    <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Actividad</th>
+                        <th>Horas</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbl_actividades">
+                    </tbody>
+                </table>
             </div>
             <script src="js/js1.js"></script>              
     </body>
