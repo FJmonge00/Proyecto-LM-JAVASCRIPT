@@ -1,4 +1,4 @@
-// Creo el objeto Alumno el cual tiene una serie de propiedades que se indican con los parametros: nombre, apellido, ciclo,etc
+// Creo el objeto Alumno el cual tiene una serie de propiedades que se indicaran con los parametros: nombre, apellido, ciclo,etc
 // Cada una de las versiones o mas bien LAS INSTANCIAS del objeto Alumno serán los ditintos alumnos de mi Aplicacion Web
 class Alumno{
     constructor(nombre, apellido, ciclo, grado, profesor, tutor, empresa, centro){
@@ -12,22 +12,21 @@ class Alumno{
         this.centro = centro;
     }
 }
-// Aqui pongo unos datos por defecto de ejemplos de alumnos, las declaro como "const" en vez de "var" ya que tienen un valor fijo
+// Aqui pongo unos datos por defecto de ejemplos de alumnos, las declaro como "const" en vez de "var" ya que tienen un valor fijo y que no varia
 // (Con esto estamos creando nuevas instancias del objeto Alumno)
-// Para añadir una nueva instancia
-const alumno1 = new Alumno("Francisco Javier", "Rodríguez", "SMR", "Medio", "Antonio", "Antonio", "Amazon", "La Cartuja");
+// Para añadir una nueva instancias por defecto para que aparezca algun ejemplo
+const alumno1 = new Alumno("Francisco Javier", "Rodríguez", "SMR", "Medio", "Antonio", "Antonio", "AWS", "La Cartuja");
 const alumno2 = new Alumno("Antonio", "Palomo", "DAW", "Superior", "Manuel", "Sofia", "Oracle", "IES Camas");
 const alumno3 = new Alumno("Ana", "Bohuele", "Comercio y Marketing", "Medio", "Myrian", "Myrian", "CDMON", "La Cartuja");
 
 // Aquí se añaden todos los alumnos guardados desde el formulario (mis imputs)
-const alumnos = [alumno1, alumno2, alumno3];
-
+var alumnos = [alumno1, alumno2, alumno3];
 function Abrir_ficha(evt, nombre_ficha) {
 
     if(nombre_ficha === "Asignaciones") anadir_alumnos_a_lista();
-    // Declare all variables
+    // Declaracion de variables
     var i, cont_botones, botones_menu;
-    // Get all elements with class="cont_botones" and hide them
+    // Oculutar todos los elemtos con la clase indicada y oculatarlo añadiendo el style display: none;
     cont_botones = document.getElementsByClassName("cont_botones");
     for (i = 0; i < cont_botones.length; i++) {
         cont_botones[i].style.display = "none";
@@ -56,7 +55,7 @@ function nuevo_profesor() {
 
 // Empresas:
 function nueva_empresa() {
-    // Todo el el codigo html que haya entre las comillas invertidas se aÑadira a div form_profes
+    // Todo el el codigo html que haya entre las comillas invertidas se aÑadira a div form_empresas
     formu_empresas.innerHTML = `
     <p>Nombre: </p> <input id="nomb" type="text"><br><br>
     <p>Direccion: </p><input id="direc" type="text"><br><br>
@@ -74,12 +73,12 @@ function nueva_empresa() {
 // INSERTAR DATOS
 function guardar_profe() {
     // Indico de donde vienen los nuevos valores (los input)
-    const nombre = document.getElementById("nomb").value;
-    const apeliidos = document.getElementById("apel").value;
+    var nombre = document.getElementById("nomb").value;
+    var apeliidos = document.getElementById("apel").value;
     // guardo en una variable los nuevos valores
-    const fila_nueva = "<tr><td>" + nombre + "</td><td>" + apeliidos + "</td></tr>";
+    var fila_nueva = "<tr><td>" + nombre + "</td><td>" + apeliidos + "</td></tr>";
     // en esta variable guardo la sentencia DOM la cual me permite crear un objeto html en este caso un TR
-    const fila = document.createElement("TR");
+    var fila = document.createElement("TR");
     // A este TR le añado el valor que habia almecnado anteriomente en la varibale fila_nueva
     fila.innerHTML = fila_nueva;
     // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
@@ -88,19 +87,19 @@ function guardar_profe() {
 
 function guardar_empresa() {
     // Indico de donde vienen los nuevos valores (los input)
-    const nombre = document.getElementById("nomb").value;
-    const direc = document.getElementById("direc").value;
-    const web = document.getElementById("web").value;
-    const per_contac = document.getElementById("per_contac").value;
-    const telf_contac = document.getElementById("telf_contac").value;
-    const mail_contac = document.getElementById("mail_contac").value;
-    const tutor = document.getElementById("tutor").value;
-    const telf_tutor = document.getElementById("telf_tutor").value;
-    const mail_tutor = document.getElementById("mail_tutor").value;
+    var nombre = document.getElementById("nomb").value;
+    var direc = document.getElementById("direc").value;
+    var web = document.getElementById("web").value;
+    var per_contac = document.getElementById("per_contac").value;
+    var telf_contac = document.getElementById("telf_contac").value;
+    var mail_contac = document.getElementById("mail_contac").value;
+    var tutor = document.getElementById("tutor").value;
+    var telf_tutor = document.getElementById("telf_tutor").value;
+    var mail_tutor = document.getElementById("mail_tutor").value;
     // guardo en una variable los nuevos valores
-    const fila_nueva = "<tr><td>" + nombre + "</td><td>" + direc + "</td><td>" + web + "</td><td>" + per_contac + "</td><td>" + telf_contac + "</td><td>" + mail_contac + "</td><td>" + tutor + "</td><td>" + telf_tutor + "</td><td>" + mail_tutor + "</td></tr>";
+    var fila_nueva = "<tr><td>" + nombre + "</td><td>" + direc + "</td><td>" + web + "</td><td>" + per_contac + "</td><td>" + telf_contac + "</td><td>" + mail_contac + "</td><td>" + tutor + "</td><td>" + telf_tutor + "</td><td>" + mail_tutor + "</td></tr>";
     // en esta variable guardo la sentencia DOM la cual me permite crear un objeto html en este caso un TR
-    const fila = document.createElement("TR");
+    var fila = document.createElement("TR");
     // A este TR le añado el valor que habia almecnado anteriomente en la varibale fila_nueva
     fila.innerHTML = fila_nueva;
     // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
@@ -124,13 +123,16 @@ function nuevo_alumno() {
 // lista_html se le indicara el id de la lista a la que quiero añadir valores y opcion es el contenido que añado a lista
 function anadir_a_lista(lista_html, opcion){
     // Variable list almacena la lista actual perteneciente al id lista_html
-    const list = document.getElementById(lista_html);
+    var list = document.getElementById(lista_html);
     // Para añadir una nueva entrada en la etiqueta select del html
-    const nueva_opcion = new Option(opcion);
-    // Array donde añado los diferentes entradas de los alumnos
-    const opciones_lista = [];
+    var nueva_opcion = new Option(opcion);
+    // DESCOMENTAR LINEA DE ABAJO PARA VER PRO CONSOLA LAS opciones o los option que se añaden a la etiqueta option de asignaciones
+    console.log(nueva_opcion)
+    // Array (vacio en esta funcion pero mas adelante se añadiran datos)donde añado los diferentes entradas de los alumnos en la lista se puede comprobar descomentado la linea anterior
+    var opciones_lista = [];
+    console.log(opciones_lista)
     // Con este bucle puedo recorrer la lista completa de nombres e ir añadiendole los nombres indicados en el paramentro nueva_opcion
-    for(var i = 0, len = list.options.length; i < len; i++){
+    for(var i = 0, tamano_lista = list.options.length; i < tamano_lista; i++){
         // guardo todos los elemetos de la lista en un arrays (En la primera ejecuación esta vacia, pero al llamar de nuevo a la funcion se añadirian de nuevo, por lo que lo guardo los valores que ya tiene en un arrays para posteriormente comprobar si ya existen)
         opciones_lista.push(list.item(i).value);
     }
@@ -141,22 +143,22 @@ function anadir_a_lista(lista_html, opcion){
 // Con esta funcion añado los alumnos con los datos indicados en los distintos input de la pestaña Alumnos
 // Esta funcion se llama cada vez que hacemos clic en guardar en la pestaña alumno
 function anadir_alumno(){
-    const nombre = document.getElementById("alumn_nombre").value;
-    const apellido = document.getElementById("alumn_apellidos").value;
-    const ciclo = document.getElementById("alumn_ciclo").value;
-    const grado = document.getElementById("alumn_grado").value;
-    const profesor = document.getElementById("alumn_profesor").value;
-    const tutor = document.getElementById("alumn_tutor").value;
-    const empresa = document.getElementById("alumn_empresa").value;
-    const centro = document.getElementById("alumn_centro").value;
+    var nombre = document.getElementById("alumn_nombre").value;
+    var apellido = document.getElementById("alumn_apellidos").value;
+    var ciclo = document.getElementById("alumn_ciclo").value;
+    var grado = document.getElementById("alumn_grado").value;
+    var profesor = document.getElementById("alumn_profesor").value;
+    var tutor = document.getElementById("alumn_tutor").value;
+    var empresa = document.getElementById("alumn_empresa").value;
+    var centro = document.getElementById("alumn_centro").value;
     // Aqui añado un nuevo alumno que es una nueva instacia al objeto Alumno
-    const alumno = new Alumno(nombre, apellido, ciclo, grado, profesor, tutor, empresa, centro);
+    var alumno = new Alumno(nombre, apellido, ciclo, grado, profesor, tutor, empresa, centro);
 
     alumnos.push(alumno);
 
-    const fila_nueva = "<tr><td>" + nombre + "</td><td>" + apellido + "</td><td>" + ciclo + "</td><td>" + grado + "</td><td>" + profesor + "</td><td>" + tutor + "</td><td>" + empresa + "</td><td>" + centro + "</td></tr>";
+    var fila_nueva = "<tr><td>" + nombre + "</td><td>" + apellido + "</td><td>" + ciclo + "</td><td>" + grado + "</td><td>" + profesor + "</td><td>" + tutor + "</td><td>" + empresa + "</td><td>" + centro + "</td></tr>";
     // en esta variable guardo la sentencia DOM la cual me permite crear un objeto html en este caso un TR
-    const fila = document.createElement("TR");
+    var fila = document.createElement("TR");
     // A este TR le añado el valor que habia almecnado anteriomente en la varibale fila_nueva
     fila.innerHTML = fila_nueva;
     // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
@@ -166,16 +168,16 @@ function anadir_alumno(){
 // con esta funcion añado a los alumnos a lista de la pestaña asignacion utiñizando la funcion añadir_a_lista
 // Esto se ejecuta al hacer clic en la pestaña de Asignaciones
 function anadir_alumnos_a_lista(){
-    for(var i = 0, len = alumnos.length; i < len; i++){
+    for(var i = 0, tamano_lista = alumnos.length; i < tamano_lista; i++){
         anadir_a_lista("asignaciones_lista", alumnos[i].nombre + " " + alumnos[i].apellido)
     }
 }
 // Al cargar la pagina completa se añadiran cada uno de los alumnos que tenemos en el objeto Alumnos
 window.onload = function(){
-        for(var i = 0, len = alumnos.length; i< len; i++){
-        const fila_nueva = "<tr><td>" + alumnos[i].nombre + "</td><td>" + alumnos[i].apellido + "</td><td>" + alumnos[i].ciclo + "</td><td>" + alumnos[i].grado + "</td><td>" + alumnos[i].profesor + "</td><td>" + alumnos[i].tutor + "</td><td>" + alumnos[i].empresa + "</td><td>" + alumnos[i].centro + "</td></tr>";
+        for(var i = 0, tamano_lista = alumnos.length; i< tamano_lista; i++){
+        var fila_nueva = "<tr><td>" + alumnos[i].nombre + "</td><td>" + alumnos[i].apellido + "</td><td>" + alumnos[i].ciclo + "</td><td>" + alumnos[i].grado + "</td><td>" + alumnos[i].profesor + "</td><td>" + alumnos[i].tutor + "</td><td>" + alumnos[i].empresa + "</td><td>" + alumnos[i].centro + "</td></tr>";
         // en esta variable guardo la sentencia DOM la cual me permite crear un objeto html en este caso un TR
-        const fila = document.createElement("TR");
+        var fila = document.createElement("TR");
         // A este TR le añado el valor que habia almecnado anteriomente en la varibale fila_nueva
         fila.innerHTML = fila_nueva;
         // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
@@ -184,9 +186,9 @@ window.onload = function(){
 };
 //.onchange significa que se ejecutará cuando se realize algun cambio en la lista por ejemplo selecionar un opcion que sería un alumno
 document.getElementById("asignaciones_lista").onchange = function() {
-    const lista = document.getElementById("asignaciones_lista");
+    var lista = document.getElementById("asignaciones_lista");
     // accede al array de las opciones de la lista del select mediante el indice con el método lista.selectedIndex
-    const opcion = lista.options[lista.selectedIndex].text;
+    var opcion = lista.options[lista.selectedIndex].text;
     // 
     var alumno;
 
@@ -216,15 +218,16 @@ document.getElementById("fechaAsignaciones").onchange = function() {
 
 };
 // Actulizar el valor de las horas sumando los valores de las distintas variables indicandas en la web ene l inputt tipo number
-// (Para poder realizar operaciones aritmeticas (la suma) es necesario indicar con parserInt que el valor indicado solo capte los numeros enteros )
+// (Para poder realizar operaciones aritmeticas (la suma) es necesario indicar con parserInt que el valor indicado es del tipo numero)
 function actualizarHoras() {
-    const hora1 = parseInt(document.getElementById("hora1").value);
-    const hora2 = parseInt(document.getElementById("hora2").value);
-    const hora3 = parseInt(document.getElementById("hora3").value);
-    const hora4 = parseInt(document.getElementById("hora4").value);
-    const hora5 = parseInt(document.getElementById("hora5").value);
+  // Esta variable seria como var numero = 6 solo que la variable proviene de valor de elemento con el id especificado
+    var hora1 = parseInt(document.getElementById("hora1").value);
+    var hora2 = parseInt(document.getElementById("hora2").value);
+    var hora3 = parseInt(document.getElementById("hora3").value);
+    var hora4 = parseInt(document.getElementById("hora4").value);
+    var hora5 = parseInt(document.getElementById("hora5").value);
 
-    const total = hora1 + hora2 + hora3 + hora4 + hora5;
+    var total = hora1 + hora2 + hora3 + hora4 + hora5;
 
     document.getElementById("totalHoras").innerHTML = "Total de horas realizadas: " + total.toString();
 }
@@ -234,3 +237,5 @@ document.getElementById("hora2").onchange = actualizarHoras;
 document.getElementById("hora3").onchange = actualizarHoras;
 document.getElementById("hora4").onchange = actualizarHoras;
 document.getElementById("hora5").onchange = actualizarHoras;
+// Para comprobar los alumnos que tengo el el array alumnos lo pongo al final para tener en cuenta tambien los que añado manualmente
+console.log(alumnos)

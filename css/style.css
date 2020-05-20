@@ -78,4 +78,31 @@ table, td, th {
 
 #asignacionesTable > tr, td, th{
     border: 0;
+    /* width: 60%; */
+}
+input{
+    border-radius: 25px;
+    font-size: 18px;
+    background-color: #e09200a8;
+    width: 20%;
+    margin-right: 25%;
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
+input:hover{
+    background-color: #e09200;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 10px 5px 0px black;
+}
+#Asignaciones input{
+    width: auto;
+    font-weight: bold;
+}
+#Asignaciones input:hover{
+    background-color: #e09200a8;
+    color: black;
+    cursor: none;
+    box-shadow: 5px 10px 5px 0px black;
 }

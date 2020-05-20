@@ -91,7 +91,8 @@
                     <tr>
                         <th colspan="4">
                             <select id="asignaciones_lista">
-                                <option disabled selected value> Selecciona un usuario </option>
+                                <!-- Con disabled no permito seleccionar esta opcion al usuario y con selected aparece como por defecto la opcion Seleciona un usuario -->
+                                <option disabled selected> Selecciona un usuario </option>
                             </select>
                         </th>
                     </tr>
@@ -140,7 +141,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <table>
+                <table id="tabla_horas">
                     <thead>
                         <tr>
                             <th>Día</th>
@@ -157,7 +158,7 @@
                                 <textarea id="asignacion1"></textarea>
                             </td>
                             <td>
-                                <input id="hora1" type="number" value="0" min="0">
+                                <input id="hora1" type="number" value="0" min="0" max="24">
                             </td>
                         </tr>
                         <tr>
@@ -168,7 +169,7 @@
                                 <textarea></textarea>
                             </td>
                             <td>
-                                <input id="hora2" type="number" value="0" min="0">
+                                <input id="hora2" type="number" value="0" min="0" max="24">
                             </td>
                         </tr>
                         <tr>
@@ -179,7 +180,7 @@
                                 <textarea></textarea>
                             </td>
                             <td>
-                                <input id="hora3" type="number" value="0" min="0">
+                                <input id="hora3" type="number" value="0" min="0" max="24">
                             </td>
                         </tr>
                         <tr>
@@ -190,7 +191,7 @@
                                 <textarea></textarea>
                             </td>
                             <td>
-                                <input id="hora4" type="number" value="0" min="0">
+                                <input id="hora4" type="number" value="0" min="0" max="24">
                             </td>
                         </tr>
                         <tr>
@@ -201,7 +202,7 @@
                                 <textarea></textarea>
                             </td>
                             <td>
-                                <input id="hora5" type="number" value="0" min="0">
+                                <input id="hora5" type="number" value="0" min="0" max="24">
                             </td>
                         </tr>
                     </tbody>
