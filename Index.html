@@ -99,41 +99,41 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Ciclo:</td>
+                        <td style="font-size: 1.6em;">Ciclo:</td>
                         <td>
                             <input type="text" id="asignacionesCiclo" value="" readonly>
                         </td>
-                        <td>Tutor laboral:</td>
+                        <td style="font-size: 1.6em;">Tutor laboral:</td>
                         <td>
                             <input type="text" id="asignacionesTutor" value="" readonly>
                         </td>
                     </tr>
                     <tr>
-                        <td>Grado:</td>
+                        <td style="font-size: 1.6em;">Grado:</td>
                         <td>
                             <input type="text" id="asignacionesGrado" value="" readonly>
                         </td>
-                        <td>Empresa:</td>
+                        <td style="font-size: 1.6em;">Empresa:</td>
                         <td>
                             <input type="text" id="asignacionesEmpresa" value="" readonly>
                         </td>
                     </tr>
                     <tr>
-                        <td>Profesor:</td>
+                        <td style="font-size: 1.6em;">Profesor:</td>
                         <td>
                             <input type="text" id="asignacionesProfesor" value="" readonly>
                         </td>
-                        <td>Centro de trabajo:</td>
+                        <td style="font-size: 1.6em;">Centro de trabajo:</td>
                         <td>
                             <input type="text" id="asignacionesCentro" value="" readonly>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4"><label id="totalHoras">Total de horas realizadas: 0</label></td>
+                        <td style="font-size: 1.6em;" colspan="4"><label id="totalHoras">Total de horas realizadas: 0</label></td>
                     </tr>
                     <tr>
                         <td>
-                            <label>
+                            <label style="font-size: 1.2em;">
                                 Fecha inicio: <input type="date" id="fechaAsignaciones">
                             </label>
                             <!-- NO he conseguido guardar elemtos de hora activiades etc por lo que lo dejo comentado -->
@@ -145,9 +145,9 @@
                 <table id="tabla_horas">
                     <thead>
                         <tr>
-                            <th>Día</th>
-                            <th>Actividades</th>
-                            <th>Horas</th>
+                            <th style="font-size: 1.6em;">Día</th>
+                            <th style="font-size: 1.6em;">Actividades</th>
+                            <th style="font-size: 1.6em;">Horas</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -156,7 +156,7 @@
                                 <label id="asignacion1fecha"></label>
                             </td>
                             <td>
-                                <textarea id="asignacion1"></textarea>
+                                <textarea  rows="4" cols="50" id="asignacion1"></textarea>
                             </td>
                             <td>
                                 <input id="hora1" type="number" value="0" min="0" max="24">
@@ -167,7 +167,7 @@
                                 <label id="asignacion2fecha"></label>
                             </td>
                             <td>
-                                <textarea></textarea>
+                                <textarea  rows="4" cols="50"></textarea>
                             </td>
                             <td>
                                 <input id="hora2" type="number" value="0" min="0" max="24">
@@ -178,7 +178,7 @@
                                 <label id="asignacion3fecha"></label>
                             </td>
                             <td>
-                                <textarea></textarea>
+                                <textarea  rows="4" cols="50"></textarea>
                             </td>
                             <td>
                                 <input id="hora3" type="number" value="0" min="0" max="24">
@@ -189,7 +189,7 @@
                                 <label id="asignacion4fecha"></label>
                             </td>
                             <td>
-                                <textarea></textarea>
+                                <textarea  rows="4" cols="50"></textarea>
                             </td>
                             <td>
                                 <input id="hora4" type="number" value="0" min="0" max="24">
@@ -200,7 +200,7 @@
                                 <label id="asignacion5fecha"></label>
                             </td>
                             <td>
-                                <textarea></textarea>
+                                <textarea  rows="4" cols="50"></textarea>
                             </td>
                             <td>
                                 <input id="hora5" type="number" value="0" min="0" max="24">
@@ -212,7 +212,7 @@
             <div class="cont_botones" id="Actividades">
                 <h1>Actividades</h1>
                 <div id="formu_actividades" style="text-align: center;"></div>
-                <button class="btn_datos_nuevos" id="nueva_actividad" onclick="nueva_actividad()" disabled>Nueva actividad</button><br><br>
+                <button class="btn_datos_nuevos" id="nueva_actividad" onclick="nuevo_actividad()">Nueva actividad</button><br><br>
                 <table class="tabla_datos">
                     <thead>
                     <tr>

@@ -125,3 +125,16 @@ p {
 #Asignaciones th {
     border: none;
 }
+select {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    padding: .4em 1.4em .3em .8em;
+    width: 290px;
+    box-sizing: border-box;
+    margin: auto;
+    border: 1px solid #aaa;
+    box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+}

@@ -52,7 +52,16 @@ function nuevo_profesor() {
   <button class="bot_guardar" id="btn_guardar" onclick="guardar_profe()"><a href="#tabla1">Guardar</a></button></button><br><br>
   `;
 }
-
+// Actividades
+function nuevo_actividad() {
+    // Todo el el codigo html que haya entre las comillas invertidas se aÑadira a div form_profes
+    formu_actividades.innerHTML = `
+  <p>Día: </p> <input id="act_dia" type="text"><br><br>
+  <p>Actividades: </p><textarea name="campo3"  rows="4" cols="50" id="act_activi" placeholder="¿Cuales han sido rus actividades?"></textarea><br><br>
+  <p>Numero de horas: </p><input id="act_nhor" type="text"><br><br>
+  <button class="bot_guardar" id="btn_guardar" onclick="guardar_actividad()"><a href="#tabla1">Guardar</a></button></button><br><br>
+  `;
+}
 // Empresas:
 function nueva_empresa() {
     // Todo el el codigo html que haya entre las comillas invertidas se aÑadira a div form_empresas
@@ -84,7 +93,22 @@ function guardar_profe() {
     // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
     document.getElementById("tbl_profes").appendChild(fila);
 }
-
+// INSERTAR DATOS
+function guardar_actividad() {
+    // Indico de donde vienen los nuevos valores (los input)
+    var dia = document.getElementById("act_dia").value;
+    var actividad = document.getElementById("act_activi").value;
+    var horas = document.getElementById("act_nhor").value;
+    // guardo en una variable los nuevos valores
+    var fila_nueva = "<tr><td>" + dia + "</td><td>" + actividad + "</td><td>" + horas + "</td></tr>";
+    // en esta variable guardo la sentencia DOM la cual me permite crear un objeto html en este caso un TR
+    var fila = document.createElement("TR");
+    // A este TR le añado el valor que habia almecnado anteriomente en la varibale fila_nueva
+    fila.innerHTML = fila_nueva;
+    // con la sentencia appenfchild añadimos un valor al elemento indicado en mi caso a la tabla profesores una fila con nuevos valores
+    document.getElementById("tbl_actividades").appendChild(fila);
+}
+// INSERTAR DATOS
 function guardar_empresa() {
     // Indico de donde vienen los nuevos valores (los input)
     var nombre = document.getElementById("nomb").value;
