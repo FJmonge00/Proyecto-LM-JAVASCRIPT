@@ -103,6 +103,6 @@ input:hover{
 #Asignaciones input:hover{
     background-color: #e09200a8;
     color: black;
-    cursor: none;
+    cursor: pointer;
     box-shadow: 5px 10px 5px 0px black;
 }
